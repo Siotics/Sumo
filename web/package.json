@@ -11,7 +11,8 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"format": "prettier --write .",
-		"lint": "prettier --check . && eslint ."
+		"lint": "prettier --check . && eslint .",
+		"uploadfs": "vite build && cd .. && pio run -t buildfs && pio run -t uploadfs"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.2.5",
@@ -46,6 +47,7 @@
 	},
 	"dependencies": {
 		"@lucide/svelte": "^0.523.0",
-		"nipplejs": "^0.10.2"
+		"nipplejs": "^0.10.2",
+		"zod": "^3.25.67"
 	}
 }

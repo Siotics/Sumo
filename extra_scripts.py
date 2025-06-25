@@ -11,7 +11,7 @@ def copy_dist_to_data(source, target, env):
     if not os.path.exists(dist_dir):
         print("ERROR: build directory not found, please build the web first, you can see the manual at README.md file")
         return 1
-    print("Copying frontend build to SPIFFS data/ folder")
+    print("Copying frontend build to data/ folder")
 
     if os.path.exists(data_dir):
         shutil.rmtree(data_dir)
